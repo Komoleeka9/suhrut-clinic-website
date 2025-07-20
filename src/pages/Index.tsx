@@ -103,23 +103,119 @@ const Index = () => {
             <p className="text-xl text-gray-600">Comprehensive medical care for all your health needs</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {[
-              "Child Treatments",
-              "Skin Treatments", 
-              "General Care",
-              "Piles",
-              "Gynaec Problems"
+              { name: "Child Treatments", desc: "Specialized care for children's health with gentle homeopathic remedies" },
+              { name: "Skin Treatments", desc: "Natural healing for eczema, psoriasis, acne and other skin conditions" },
+              { name: "General Care", desc: "Complete family healthcare for fever, headaches, and common ailments" },
+              { name: "Piles Treatment", desc: "Effective non-surgical treatment for hemorrhoids and related issues" },
+              { name: "Gynaec Problems", desc: "Women's health care for menstrual, hormonal, and reproductive issues" }
             ].map((service, index) => (
               <Card key={index} className="medical-card">
                 <CardContent className="pt-6">
                   <div className="flex items-center mb-3">
                     <div className="w-3 h-3 bg-accent rounded-full mr-3"></div>
-                    <h3 className="font-semibold text-lg">{service}</h3>
+                    <h3 className="font-semibold text-lg">{service.name}</h3>
                   </div>
-                  <p className="text-gray-600">
-                    Professional homeopathic treatment with personalized care and attention.
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {service.desc}
                   </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link to="/services">
+              <Button size="lg" variant="outline">
+                View All Services
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Why Choose Us */}
+      <div className="medical-section">
+        <div className="medical-container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Shushrut Clinic?</h2>
+            <p className="text-xl text-gray-600">Experience the difference of personalized homeopathic care</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: Star,
+                title: "Expert Care",
+                desc: "Dr. Ujwala Gavhane (B.H.M.S) with years of clinical experience"
+              },
+              {
+                icon: Clock,
+                title: "Flexible Hours",
+                desc: "Morning and evening consultations to fit your schedule"
+              },
+              {
+                icon: MessageCircle,
+                title: "WhatsApp Support", 
+                desc: "Quick consultation and follow-up support via WhatsApp"
+              },
+              {
+                icon: Phone,
+                title: "Emergency Care",
+                desc: "Available for urgent medical consultations when needed"
+              }
+            ].map((feature, index) => (
+              <Card key={index} className="medical-card text-center">
+                <CardContent className="pt-8">
+                  <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-sm text-gray-600">{feature.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonials */}
+      <div className="bg-white medical-section">
+        <div className="medical-container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Patients Say</h2>
+            <p className="text-xl text-gray-600">Real experiences from our valued patients</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Priya Sharma",
+                condition: "Skin Treatment",
+                text: "Dr. Gavhane's treatment completely cured my chronic skin condition. Highly recommend!"
+              },
+              {
+                name: "Rajesh Patil", 
+                condition: "General Care",
+                text: "Excellent care and personal attention. The doctor really listens to your concerns."
+              },
+              {
+                name: "Sunita Desai",
+                condition: "Child Treatment", 
+                text: "My child's health issues were resolved naturally. Very satisfied with the treatment."
+              }
+            ].map((testimonial, index) => (
+              <Card key={index} className="medical-card">
+                <CardContent className="pt-6">
+                  <div className="flex items-center mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
+                  <div>
+                    <p className="font-semibold">{testimonial.name}</p>
+                    <p className="text-sm text-gray-600">{testimonial.condition}</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
