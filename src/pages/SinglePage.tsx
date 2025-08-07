@@ -57,7 +57,7 @@ const SinglePage = () => {
               </div>
             </div>
             <div className="text-center">
-              <div className="bg-orange-500 text-white px-8 py-4 rounded-lg inline-block mb-6 transform rotate-0 shadow-lg">
+              <div className="bg-orange-500 text-white px-8 py-4 rounded-lg inline-block mb-6 shadow-lg">
                 <span className="font-bold text-lg">{t('hero.free_consultation')}</span>
               </div>
             </div>
