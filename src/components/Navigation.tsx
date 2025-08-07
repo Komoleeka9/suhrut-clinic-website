@@ -31,15 +31,15 @@ export function Navigation() {
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('home')} 
-            className="flex items-center space-x-3 cursor-pointer"
+            className="flex items-center space-x-2 md:space-x-3 cursor-pointer"
           >
             <img 
               src="/lovable-uploads/561fe440-5cb9-4669-a602-2201ca56e857.png"
               alt="Shushrut Clinic Logo"
-              className="w-12 h-12 object-contain"
+              className="w-10 h-10 md:w-12 md:h-12 object-contain"
             />
-            <div>
-              <h1 className="font-bold text-lg text-gray-900">{t('hero.title')}</h1>
+            <div className="hidden sm:block">
+              <h1 className="font-bold text-sm md:text-lg text-gray-900">{t('hero.title')}</h1>
               <p className="text-xs text-gray-600">{t('hero.doctor')}</p>
             </div>
           </button>
