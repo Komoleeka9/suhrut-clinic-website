@@ -39,7 +39,7 @@ const SinglePage = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-white text-primary hover:bg-gray-100"
+                  className="bg-white text-primary hover:bg-gray-100 hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl z-10 relative"
                   onClick={() => scrollToSection('appointment')}
                 >
                   <Calendar className="h-5 w-5 mr-2" />
@@ -48,7 +48,7 @@ const SinglePage = () => {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-primary"
+                  className="border-white text-white hover:bg-white hover:text-primary hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl z-10 relative"
                   onClick={() => window.open("https://wa.me/917387053508", "_blank")}
                 >
                   <MessageCircle className="h-5 w-5 mr-2" />
@@ -69,7 +69,7 @@ const SinglePage = () => {
       <section className="medical-section">
         <div className="medical-container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="medical-card text-center">
+            <Card className="medical-card text-center hover:shadow-lg transition-all duration-300 hover:scale-105 transform">
               <CardContent className="pt-6">
                 <Phone className="h-8 w-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold mb-2">{t('contact.call_us')}</h3>
@@ -78,18 +78,18 @@ const SinglePage = () => {
               </CardContent>
             </Card>
             
-            <Card className="medical-card text-center">
+            <Card className="medical-card text-center hover:shadow-lg transition-all duration-300 hover:scale-105 transform">
               <CardContent className="pt-6">
                 <MessageCircle className="h-8 w-8 text-green-600 mx-auto mb-3" />
                 <h3 className="font-semibold mb-2">{t('contact.whatsapp')}</h3>
                 <p className="text-sm text-gray-600 mb-3">{t('contact.quick_consultation')}</p>
-                <Button size="sm" className="bg-green-600 hover:bg-green-700">
+                <Button size="sm" className="bg-green-600 hover:bg-green-700 hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl z-10 relative">
                   {t('contact.message_now')}
                 </Button>
               </CardContent>
             </Card>
             
-            <Card className="medical-card text-center">
+            <Card className="medical-card text-center hover:shadow-lg transition-all duration-300 hover:scale-105 transform">
               <CardContent className="pt-6">
                 <MapPin className="h-8 w-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold mb-2">{t('contact.location')}</h3>
@@ -98,7 +98,7 @@ const SinglePage = () => {
               </CardContent>
             </Card>
             
-            <Card className="medical-card text-center">
+            <Card className="medical-card text-center hover:shadow-lg transition-all duration-300 hover:scale-105 transform">
               <CardContent className="pt-6">
                 <Clock className="h-8 w-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold mb-2">{t('contact.hours')}</h3>
@@ -149,14 +149,14 @@ const SinglePage = () => {
               </div>
             </div>
             <div className="space-y-6">
-              <Card className="medical-card">
+              <Card className="medical-card hover:shadow-lg transition-all duration-300 hover:scale-105 transform">
                 <CardContent className="p-6">
                   <Shield className="h-8 w-8 text-primary mb-3" />
                   <h4 className="font-semibold mb-2">Safe & Natural Treatment</h4>
                   <p className="text-gray-600">Homeopathic medicines are natural, safe, and without side effects, suitable for all age groups including infants and pregnant women.</p>
                 </CardContent>
               </Card>
-              <Card className="medical-card">
+              <Card className="medical-card hover:shadow-lg transition-all duration-300 hover:scale-105 transform">
                 <CardContent className="p-6">
                   <Star className="h-8 w-8 text-primary mb-3" />
                   <h4 className="font-semibold mb-2">Personalized Care</h4>
@@ -225,6 +225,7 @@ const SinglePage = () => {
             <Button 
               size="lg" 
               variant="outline"
+              className="hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl z-10 relative border-2 hover:border-primary"
               onClick={() => scrollToSection('appointment')}
             >
               {t('services.view_all')}
@@ -367,7 +368,7 @@ const SinglePage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-primary hover:bg-gray-100"
+              className="bg-white text-primary hover:bg-gray-100 hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl z-10 relative"
               onClick={() => scrollToSection('appointment')}
             >
               <Calendar className="h-5 w-5 mr-2" />
@@ -376,7 +377,7 @@ const SinglePage = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-primary"
+              className="border-white text-white hover:bg-white hover:text-primary hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl z-10 relative"
               onClick={() => scrollToSection('contact')}
             >
               <Phone className="h-5 w-5 mr-2" />

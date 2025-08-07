@@ -62,7 +62,7 @@ export function Navigation() {
             <LanguageSwitcher />
             <Button
               size="sm"
-              className="hidden sm:flex bg-green-600 hover:bg-green-700"
+              className="hidden sm:flex bg-green-600 hover:bg-green-700 hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl z-10 relative"
               onClick={() => window.open("https://wa.me/917387053508", "_blank")}
             >
               <MessageCircle className="h-4 w-4 mr-1" />
@@ -72,7 +72,7 @@ export function Navigation() {
             <Button
               size="sm"
               variant="outline"
-              className="hidden sm:flex"
+              className="hidden sm:flex hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl z-10 relative border-2 hover:border-primary"
               onClick={() => window.open("tel:+917387053508", "_blank")}
             >
               <Phone className="h-4 w-4 mr-1" />
@@ -103,7 +103,7 @@ export function Navigation() {
                   
                   <div className="pt-4 border-t space-y-2">
                     <Button
-                      className="w-full bg-green-600 hover:bg-green-700"
+                      className="w-full bg-green-600 hover:bg-green-700 hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl"
                       onClick={() => {
                         window.open("https://wa.me/917387053508", "_blank");
                         setIsOpen(false);
@@ -114,7 +114,7 @@ export function Navigation() {
                     </Button>
                     <Button
                       variant="outline"
-                      className="w-full"
+                      className="w-full hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl border-2 hover:border-primary"
                       onClick={() => {
                         window.open("tel:+917387053508", "_blank");
                         setIsOpen(false);
