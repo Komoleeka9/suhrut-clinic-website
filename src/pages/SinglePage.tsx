@@ -378,10 +378,10 @@ const SinglePage = () => {
               size="lg" 
               variant="outline" 
               className="border-white text-white hover:bg-white hover:text-primary hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-white/30 z-10 relative text-sm md:text-base"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => window.open("https://wa.me/917387053508", "_blank")}
             >
-              <Phone className="h-4 w-4 md:h-5 md:w-5 mr-2" />
-              {t('cta.contact_us')}
+              <MessageCircle className="h-4 w-4 md:h-5 md:w-5 mr-2" />
+              WhatsApp Consultation
             </Button>
           </div>
         </div>
