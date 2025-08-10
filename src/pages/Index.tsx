@@ -14,10 +14,10 @@ const Index = () => {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Shushrut Clinic
               </h1>
-              <h2 className="text-2xl md:text-3xl text-blue-100 mb-4">
+              <h2 className="text-2xl md:text-3xl text-white/80 mb-4">
                 Dr. Ujwala Gavhane
               </h2>
-              <p className="text-lg text-blue-100 mb-6">
+              <p className="text-lg text-white/80 mb-6">
                 (B.H.M.S) Homeopathic & General Physician
               </p>
               <p className="text-xl mb-8">
@@ -25,7 +25,7 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/appointment">
-                  <Button size="lg" className="bg-white text-primary hover:bg-gray-100 hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-white/30 z-10 relative">
+                  <Button size="lg" className="bg-white text-primary hover:bg-gray-100/90 hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-white/30 z-10 relative">
                     <Calendar className="h-5 w-5 mr-2" />
                     Book Appointment
                   </Button>
@@ -42,7 +42,7 @@ const Index = () => {
               </div>
             </div>
             <div className="text-center">
-              <div className="bg-orange-500 text-white px-6 py-3 rounded-full inline-block mb-6 transform rotate-12">
+              <div className="bg-accent text-white px-6 py-3 rounded-full inline-block mb-6 transform rotate-12 hover:rotate-6 transition-transform duration-300">
                 <span className="font-bold">FREE FIRST CONSULTATION</span>
               </div>
             </div>
@@ -58,17 +58,17 @@ const Index = () => {
               <CardContent className="pt-6">
                 <Phone className="h-8 w-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold mb-2">Call Us</h3>
-                <p className="text-sm text-gray-600 mb-3">+91-8888547482</p>
-                <p className="text-sm text-gray-600">+91-7387053508</p>
+                <p className="text-sm text-muted-foreground mb-3">+91-8888547482</p>
+                <p className="text-sm text-muted-foreground">+91-7387053508</p>
               </CardContent>
             </Card>
             
             <Card className="medical-card text-center">
               <CardContent className="pt-6">
-                <MessageCircle className="h-8 w-8 text-green-600 mx-auto mb-3" />
+                <MessageCircle className="h-8 w-8 text-accent mx-auto mb-3" />
                 <h3 className="font-semibold mb-2">WhatsApp</h3>
-                <p className="text-sm text-gray-600 mb-3">Quick consultation</p>
-                <Button size="sm" className="bg-green-600 hover:bg-green-700">
+                <p className="text-sm text-muted-foreground mb-3">Quick consultation</p>
+                <Button size="sm" className="bg-accent hover:bg-accent/90 text-white hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-accent/30">
                   Message Now
                 </Button>
               </CardContent>
@@ -78,8 +78,8 @@ const Index = () => {
               <CardContent className="pt-6">
                 <MapPin className="h-8 w-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold mb-2">Location</h3>
-                <p className="text-sm text-gray-600">Near Smita Patil School</p>
-                <p className="text-sm text-gray-600">Warje, Pune</p>
+                <p className="text-sm text-muted-foreground">Near Smita Patil School</p>
+                <p className="text-sm text-muted-foreground">Warje, Pune</p>
               </CardContent>
             </Card>
             
@@ -87,8 +87,8 @@ const Index = () => {
               <CardContent className="pt-6">
                 <Clock className="h-8 w-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold mb-2">Clinic Hours</h3>
-                <p className="text-sm text-gray-600">Mon-Fri: 10:30-1:30</p>
-                <p className="text-sm text-gray-600">6:00-9:00 PM</p>
+                <p className="text-sm text-muted-foreground">Mon-Fri: 10:30-1:30</p>
+                <p className="text-sm text-muted-foreground">6:00-9:00 PM</p>
               </CardContent>
             </Card>
           </div>
@@ -100,7 +100,7 @@ const Index = () => {
         <div className="medical-container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Facilities</h2>
-            <p className="text-xl text-gray-600">Comprehensive medical care for all your health needs</p>
+            <p className="text-xl text-muted-foreground">Comprehensive medical care for all your health needs</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -117,7 +117,7 @@ const Index = () => {
                     <div className="w-3 h-3 bg-accent rounded-full mr-3"></div>
                     <h3 className="font-semibold text-lg">{service.name}</h3>
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {service.desc}
                   </p>
                 </CardContent>
@@ -127,7 +127,7 @@ const Index = () => {
 
           <div className="text-center">
             <Link to="/services">
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/30 border-2 hover:border-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-primary/10">
                 View All Services
               </Button>
             </Link>
@@ -140,7 +140,7 @@ const Index = () => {
         <div className="medical-container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Shushrut Clinic?</h2>
-            <p className="text-xl text-gray-600">Experience the difference of personalized homeopathic care</p>
+            <p className="text-xl text-muted-foreground">Experience the difference of personalized homeopathic care</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -170,7 +170,7 @@ const Index = () => {
                 <CardContent className="pt-8">
                   <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />
                   <h3 className="text-lg font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-sm text-gray-600">{feature.desc}</p>
+                  <p className="text-sm text-muted-foreground">{feature.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -183,7 +183,7 @@ const Index = () => {
         <div className="medical-container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Patients Say</h2>
-            <p className="text-xl text-gray-600">Real experiences from our valued patients</p>
+            <p className="text-xl text-muted-foreground">Real experiences from our valued patients</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -208,13 +208,13 @@ const Index = () => {
                 <CardContent className="pt-6">
                   <div className="flex items-center mb-3">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
+                      <Star key={i} className="h-4 w-4 text-yellow-500 fill-current transition-transform duration-300 hover:scale-110" />
                     ))}
                   </div>
                   <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
                   <div>
                     <p className="font-semibold">{testimonial.name}</p>
-                    <p className="text-sm text-gray-600">{testimonial.condition}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.condition}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -229,20 +229,21 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Healing Journey?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-white/80">
             Book your consultation today and experience natural, effective healthcare
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/appointment">
-              <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
+              <Button size="lg" className="bg-white text-primary hover:bg-gray-100/90 hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-white/30 z-10 relative">
                 <Calendar className="h-5 w-5 mr-2" />
                 Book Appointment Now
               </Button>
             </Link>
             <Link to="/contact">
               <Button 
-                size="lg"  
-                className="bg-white text-primary hover:bg-gray-100"
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-primary hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-white/30 z-10 relative"
               >
                 <Phone className="h-5 w-5 mr-2" />
                 Contact Us
