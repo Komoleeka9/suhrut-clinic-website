@@ -31,7 +31,10 @@ const Index = () => {
                   </Button>
                 </Link>
                 <Button 
-                  size="lg" className="bg-white text-blue hover:bg-gray-100" onClick={() => window.open("https://wa.me/917387053508", "_blank")}
+                  size="lg" 
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-primary hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-white/30 z-10 relative" 
+                  onClick={() => window.open("https://wa.me/917387053508", "_blank")}
                 >
                   <MessageCircle className="h-5 w-5 mr-2" />
                   WhatsApp Us
