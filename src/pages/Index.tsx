@@ -25,7 +25,7 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/appointment">
-                  <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
+                  <Button size="lg" className="bg-white text-primary hover:bg-gray-100 hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-white/30 z-10 relative">
                     <Calendar className="h-5 w-5 mr-2" />
                     Book Appointment
                   </Button>
