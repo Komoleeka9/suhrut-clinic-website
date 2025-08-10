@@ -33,7 +33,7 @@ const Index = () => {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-white text-primary hover:bg-white"
+                  className="bg-white text-primary hover:bg-gray-100"
                   onClick={() => window.open("https://wa.me/917387053508", "_blank")}
                 >
                   <MessageCircle className="h-5 w-5 mr-2" />
